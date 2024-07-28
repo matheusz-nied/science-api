@@ -1,0 +1,21 @@
+# .air.toml
+
+# Configuração de diretório
+[dirs]
+watch = ["./"]
+
+# Configuração de arquivos a serem observados
+[files]
+include_ext = ["go", "tpl", "tmpl", "html", "js", "css"]
+exclude_dir = ["tmp", "vendor", "node_modules"]
+
+# Comando de build e run
+[build]
+cmd = "go build -o /app/nied-science ./cmd/app"
+bin = "/app/nied-science"
+
+# Configuração de logs
+[log]
+color = true
+time = true
+level = "debug"
